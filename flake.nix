@@ -38,7 +38,7 @@
         hvegaPkgsDev = builtins.mapAttrs (_: x: pkgs.haskell.lib.doBenchmark x) hvegaPkgs;
       in
       {
-        packages = hvegaPkgs // { hvegaPkgs.default = hvegaPkgs.hvega; };
+        packages = hvegaPkgs // { default = hvegaPkgs.hvega; };
 
         devShells.default = hpkgs.shellFor {
           # shellHook =
