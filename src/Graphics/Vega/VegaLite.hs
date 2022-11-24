@@ -270,8 +270,6 @@ module Graphics.Vega.VegaLite
          -- * Creating a Vega-Lite Specification
 
          VL.toVegaLite
-       , VL.toVegaLiteSchema
-       , VL.vlSchema2, VL.vlSchema3, VL.vlSchema4, VL.vlSchema
        , VL.fromVL
        , VL.VLProperty(..)
        , VL.VLSpec

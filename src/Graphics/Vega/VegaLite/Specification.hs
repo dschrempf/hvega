@@ -16,8 +16,7 @@ The structure of the Vega-Lite specification.
 
 module Graphics.Vega.VegaLite.Specification
        ( toVegaLite
-       , toVegaLiteSchema
-       , vlSchema2, vlSchema3, vlSchema4, vlSchema
+       , vlSchema5
        , fromVL
        , VLProperty(..)
        , VLSpec
@@ -90,20 +89,10 @@ type VLSpec = Value
 baseSchema :: T.Text
 baseSchema = "https://vega.github.io/schema/vega-lite/"
 
--- | The latest version 2 Vega-Lite schema (equivalent to
---   @'vlSchema' 2 Nothing Nothing Nothing@).
-vlSchema2 :: T.Text
-vlSchema2 = vlSchema 2 Nothing Nothing Nothing
-
--- | The latest version 3 Vega-Lite schema (equivalent to
---   @'vlSchema' 3 Nothing Nothing Nothing@).
-vlSchema3 :: T.Text
-vlSchema3 = vlSchema 3 Nothing Nothing Nothing
-
--- | The latest version 4 Vega-Lite schema (equivalent to
---   @'vlSchema' 4 Nothing Nothing Nothing@).
-vlSchema4 :: T.Text
-vlSchema4 = vlSchema 4 Nothing Nothing Nothing
+-- | The latest version 5 Vega-Lite schema (equivalent to @'vlSchema' 5 Nothing
+--   Nothing Nothing@).
+vlSchema5 :: T.Text
+vlSchema5 = vlSchema 5 Nothing Nothing Nothing
 
 -- | Create the Vega-Lite schema for an arbitrary version. See
 --   <https://github.com/vega/schema> for more information on naming
@@ -184,7 +173,7 @@ the schema.
 -}
 
 toVegaLite :: [PropertySpec] -> VegaLite
-toVegaLite = toVegaLiteSchema vlSchema4
+toVegaLite = toVegaLiteSchema vlSchema5
 
 
 {-|
