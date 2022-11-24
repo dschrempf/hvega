@@ -1,21 +1,23 @@
-*~
-
-# Trying out HLS, now I have random flymake files.
-*_flymake.hs
-
-.ghc.environment.*
-^dist/
-dist-newstyle/
+dist
+dist-*
+cabal-dev
+*.o
+*.hi
+*.hie
+*.chi
+*.chs.h
+*.dyn_o
+*.dyn_hi
+.hpc
+.hsenv
+.cabal-sandbox/
+cabal.sandbox.config
+*.prof
+*.aux
+*.hp
+*.eventlog
 .stack-work/
-.ipynb_checkpoints/
-
-# nix
-result
-result-2
-
-# let's hide the lock files for now
-stack*yaml.lock
-
-# We create these from a otebook so never check them in
-notebooks/line.json.vl
-notebooks/interactive.json.vl
+cabal.project.local
+cabal.project.local~
+.HTF/
+.ghc.environment.*

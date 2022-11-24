@@ -1,0 +1,47 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+    "data": {
+        "format": {
+            "parse": {
+                "date": "date:'%Y/%m/%d'"
+            }
+        },
+        "url": "https://vega.github.io/vega-lite/data/seattle-weather.csv"
+    },
+    "encoding": {
+        "x": {
+            "axis": {
+                "format": "%b"
+            },
+            "field": "month",
+            "type": "temporal"
+        },
+        "y": {
+            "aggregate": "max",
+            "field": "maxTemp",
+            "type": "quantitative"
+        }
+    },
+    "mark": {
+        "point": {
+            "fill": "black"
+        },
+        "type": "line"
+    },
+    "transform": [
+        {
+            "as": "sampleDate",
+            "calculate": "datum.date"
+        },
+        {
+            "as": "maxTemp",
+            "calculate": "datum.temp_max"
+        },
+        {
+            "as": "month",
+            "field": "sampleDate",
+            "timeUnit": "month"
+        }
+    ],
+    "width": 400
+}

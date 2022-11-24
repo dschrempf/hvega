@@ -1,7 +1,0 @@
-flags: {}
-
-packages:
-- hvega/
-- ihaskell-hvega/
-
-resolver: lts-17.2
