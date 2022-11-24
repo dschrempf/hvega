@@ -1,5 +1,5 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "description": "Horizontally repeated charts that show the histograms of different parameters of cars in different countries",
     "repeat": {
         "column": [
